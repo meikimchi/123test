@@ -1,7 +1,7 @@
 #REcol Gentry, Author: My Kim Nguyen Vo, Student ID: E10704005
 
 #getwd()
-pdf(file = 'gentry_E10704005.pdf',width = 5.90551,height = 5.90551)
+#pdf(file = 'gentry_E10704005.pdf',width = 5.90551,height = 5.90551)
 load (url ('http://www.davidzeleny.net/wiki/lib/exe/fetch.php?media=recol:data:gentry197.r'))
 gentry.coord <- read.delim ('http://www.davidzeleny.net/wiki/lib/exe/fetch.php?media=recol:data:gentry.coord.txt', row.names = 1)
 
@@ -33,7 +33,3 @@ xmin.max<-gentry.coord$Lat[yindex]
 lines(exp(ymin.max)~xmin.max, lty=2,col=cols[3]) 
 
 
-text(x=35,y=70,label =expression(gamma),cex=3,col=cols[3]) 
-text(x=20,y=5,label=expression(bar(alpha)),cex=3,col=cols[2]) 
-text(x=60,y=280,label="A",adj=0,cex=1.5,font = 2) 
-dev.off()
